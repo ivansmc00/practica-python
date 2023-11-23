@@ -1,7 +1,3 @@
-
-from curses.ascii import isdigit
-
-
 def estaEnRango(valor, minimo, maximo):
     if (valor.isdigit()):
         if (minimo <= valor <= maximo):
