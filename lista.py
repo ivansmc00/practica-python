@@ -1,13 +1,11 @@
 def estaEnRango(valor, minimo, maximo):
-    if (valor.isdigit()):
-        if (minimo <= valor <= maximo):
-            return True
-    return False
+    try:
+        return minimo <= valor <= maximo
+    except:
+        return False
 
 def estaEnLista(valor, lista):
-    if (valor in lista):
-        return True
-    return False
+    return valor in lista
 
 try:
     num = int(input("Introduce un número comprendido entre 1 y 20: "))
@@ -20,6 +18,5 @@ try:
             print("El número " + str(num) + " no está en la lista")
     else:
         print("El número " + str(num) + " no está comprendido entre 1 y 20")
-
-except ValueError:
+except:
     print("ERROR: La cadena introducida no es un número")

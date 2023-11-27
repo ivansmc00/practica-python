@@ -1,4 +1,3 @@
-
 def esBinario(strbinario):
     if (strbinario.isdigit()):
         if all(caracter in '01' for caracter in strbinario):
